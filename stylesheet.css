@@ -1,0 +1,1538 @@
+/* Indhold
+
+1. Generelle regler
+    1.1. Tekst
+2. Site
+    2.1. Hero Image
+3. Menu
+4. indhold
+    4.1. CV
+    4.2. Projekter
+    4.3. Baggrunde
+5. Effekt Classes
+
+Links:
+http://martinottesen.dk/kea/01-web/02-html/01_02_05_stilartsite_v2/
+http://martinottesen.dk/kea/01-web/04-responsive/01_04_02_responsive_v2/
+http: //martinottesen.dk/kea/02-content/02-redesign/02_02_06_redesign/http://martinottesen.dk/kea/02-content/02-redesign/02_02_05_dokumentationssite/
+http://martinottesen.dk/kea/03-animation/spil/
+http://martinottesen.dk/kea/03-animation/03_05_01_Gruppe-23_dokumentationssite/
+http://martinottesen.dk/kea/04-ux/04_03_01_web-prototype/
+
+Ideer:
+Heroimage med knap til portfolio
+bannere med dropdown til beskrivelse og slideshow
+
+/*********************** 1. GENERELLE REGLER ***************************/
+
+img {
+    width: 100%;
+}
+
+@media only screen and (min-width:1015px) {
+
+    body {
+        margin: 0%;
+        background-image: url(billeder/heroimage.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    Section {
+        margin-left: 28vw;
+        width: 67.5vw;
+        margin-right: auto
+    }
+
+    /*********************** 1.1. TEKST **************************/
+
+    h1 {
+        font-family: PLayfair Display;
+
+    }
+
+    h2 {
+        font-family: Playfair Display;
+        margin-top: -.01vw;
+        font-size: 1.1vw;
+        font-weight: 400;
+    }
+
+    a {
+        font-family: raleway;
+
+    }
+
+    p {
+        font-family: raleway;
+        font-size: .8vw;
+
+    }
+
+    p1 {
+        font-family: raleway;
+        font-size: 1vw;
+    }
+
+
+
+    /*********************** 2. SITE ***************************/
+
+
+
+    #site {
+        width: 100%;
+        height: 56.25vw;
+        position: absolute;
+
+    }
+
+    /*********************** 2.1. HERO IMAGE ***************************/
+
+
+    #hero {
+        background-image: url(billeder/heroimage.jpg);
+        width: 100%;
+        height: 56.25vw;
+        position: absolute;
+        z-index: 10;
+        filter: blur(.1vw)
+    }
+
+    #hero_border {
+        position: absolute;
+        width: 35%;
+        height: 35%;
+        border: .5vw solid white;
+        margin-left: 31.9vw;
+        margin-right: 10vw;
+        margin-top: 16.8vw;
+        z-index: 11;
+        text-align: center;
+    }
+
+    .hero_text {
+        padding: 1vw;
+        width: 80%;
+        margin-top: 1vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+    }
+
+    .hero_text h1 {
+        font-family: Raleway;
+        font-size: 2.5vw;
+        font-weight: 100;
+        color: white;
+        padding-bottom: .5vw;
+        border-bottom: .5vw solid white;
+
+
+    }
+
+    .hero_text h2 {
+        font-family: Raleway;
+        font-size: 2vw;
+        font-weight: 100;
+        color: white;
+        margin-top: -1vw
+    }
+
+    #hero_knap {
+        width: 10vw;
+        height: 3vw;
+        margin-top: -1vw;
+        padding: 0.5vw;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transition: all 0.3s ease;
+        border: 0.1vw solid white;
+    }
+
+    #hero_knap:hover {
+        background-color: rgba(0, 0, 0, 0.50);
+        color: white;
+
+    }
+
+    p2 {
+        font-family: raleway;
+        font-weight: 600;
+        font-size: 1.2vw;
+    }
+
+
+    /*********************** 3. MENU ***************************/
+
+    .sidemenu {
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0));
+        width: 25vw;
+        height: 100%;
+        position: fixed;
+        text-align: center;
+        z-index: 1;
+        overflow-x: hidden;
+
+    }
+
+    #billede {
+        padding-top: 4vw;
+
+    }
+
+    #billede img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        border-radius: 2vw;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        transition: all .3s ease;
+    }
+
+    #billede img:hover {
+        transform: translate(0px, -5px);
+    }
+
+
+    #navn h1 {
+        font-size: 2vw;
+        color: white;
+        font-weight: 100
+    }
+
+    #punkter a {
+        display: block;
+        padding: 8px 8px 8px 8px;
+        text-decoration: none;
+        font-size: 1.1vw;
+        font-weight: 100;
+        color: White;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        border-right: 0px solid white;
+        border-left: 0px solid white;
+        border-radius: .5vw;
+        transition: 0.2s ease;
+    }
+
+    #punkter a:hover {
+        border-right: 4px solid white;
+        border-left: 4px solid white;
+        font-size: 1.2vw
+    }
+
+    .social_links {
+        display: flex;
+        justify-content: center;
+        margin: 1vw
+    }
+
+    .facebook img {
+        width: 3vw;
+        transition: all .2s ease;
+    }
+
+    .instagram img {
+        width: 3vw;
+        margin-left: .8vw;
+        transition: all .2s ease;
+    }
+
+    .linkedin img {
+        width: 3vw;
+        margin-left: .8vw;
+        transition: all .2s ease;
+    }
+
+    .twitter img {
+        width: 3vw;
+        margin-left: .8vw;
+        transition: all .2s ease;
+    }
+
+    .facebook img:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 1vw white;
+        border-radius: 0.7vw;
+    }
+
+    .instagram img:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 1vw white;
+        border-radius: 0.7vw;
+    }
+
+    .linkedin img:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 1vw white;
+        border-radius: 0.3vw;
+    }
+
+    .twitter img:hover {
+        transform: scale(1.2);
+        box-shadow: 0 0 1vw white;
+        border-radius: 0.3vw;
+    }
+
+
+    /*********************** 4. INDHOLD ***************************/
+
+    #indhold {
+        padding-top: 2vw;
+        position: absolute;
+    }
+
+
+    /*********************** 4.1. CV ***************************/
+
+    #banner0 {
+        width: 100%;
+        height: 5vw;
+        padding: .5vw;
+        margin-top: 2vw;
+        cursor: pointer;
+        display: flex;
+        background-image: linear-gradient(350deg, grey, white);
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        transition: all .5s ease;
+    }
+
+    #banner0:hover {
+        transform: translate(0px, -5px);
+    }
+
+    .overskrift {
+        height: 4vw;
+        width: 100%;
+        flex-grow: 2;
+        flex-basis: 100%;
+        padding: inherit;
+        justify-content: space-between;
+        font-size: .7vw;
+        display: flex;
+    }
+
+    .icons {
+        height: 4vw;
+        width: 100%;
+        flex-grow: 1;
+        flex-basis: 150%;
+        padding: inherit;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .overskrift img {
+        width: 3vw
+    }
+
+    .icons img {
+        width: 2.8vw;
+        margin: 0 0.3vw
+    }
+
+    .container {
+        position: relative;
+        width: 3vw;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: .1vw;
+        right: 0;
+        height: 100%;
+        width: 3vw;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: #4b4b4b;
+        border-radius: .5vw;
+    }
+
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: white;
+        font-size: .7vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .cv {
+        width: 100%;
+        height: 0vw;
+        display: flex;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    #tekst1 {
+        flex-grow: 1;
+        flex-basis: 100%;
+        padding: 1vw;
+        z-index: 3;
+
+    }
+
+    #tekst2 {
+        flex-grow: 1;
+        flex-basis: 60%;
+        padding: 1vw;
+        z-index: 3;
+
+    }
+
+    #billede1 {
+        flex-grow: 1;
+        flex-basis: 0%;
+        padding: 1vw;
+        z-index: 3;
+    }
+
+    #billede1 img {
+        width: 15vw
+    }
+
+
+    .komp {
+        height: 2.04vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .komptekst {
+        padding: .5vw;
+        width: 40%;
+    }
+
+    .dots {
+        display: flex;
+    }
+
+    .dot1 {
+        margin: 0.4vw 0.15vw;
+        height: 1.3vw;
+        width: 1.3vw;
+        border-radius: 1vw;
+        background-color: darkblue;
+
+    }
+
+    .dot2 {
+        margin: 0.4vw 0.15vw;
+        border: 0.05vw solid darkblue;
+        height: 1.3vw;
+        width: 1.3vw;
+        border-radius: 1vw;
+
+    }
+
+    .dot3 {
+        margin: 0.4vw 0.15vw;
+        height: 1.3vw;
+        width: 1.3vw;
+        border-radius: 1vw;
+        background-image: linear-gradient(90deg, darkblue, #d4d4d4)
+    }
+
+
+
+    /*********************** 4.2. PROJEKTER ***************************/
+
+
+    #banner1 {
+        width: 100%;
+        height: 5vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+        transition: all .5s ease;
+    }
+
+    #banner2 {
+        width: 100%;
+        height: 5vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+        transition: all .5s ease;
+    }
+
+    #banner3 {
+        width: 100%;
+        height: 5vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+        transition: all .5s ease;
+    }
+
+    #banner4 {
+        width: 100%;
+        height: 5vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+        transition: all .5s ease;
+    }
+
+    #banner5 {
+        width: 100%;
+        height: 5vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+        transition: all .5s ease;
+    }
+
+    #banner6 {
+        width: 100%;
+        height: 5vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+        transition: all .5s ease;
+    }
+
+    #banner7 {
+        width: 100%;
+        height: 5vw;
+        padding: .5vw;
+        margin-bottom: 2vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+        transition: all .5s ease;
+    }
+
+    #banner1:hover {
+        transform: translate(0px, -5px);
+    }
+
+    #banner2:hover {
+        transform: translate(0px, -5px);
+    }
+
+    #banner3:hover {
+        transform: translate(0px, -5px);
+    }
+
+    #banner4:hover {
+        transform: translate(0px, -5px);
+    }
+
+    #banner5:hover {
+        transform: translate(0px, -5px);
+    }
+
+    #banner6:hover {
+        transform: translate(0px, -5px);
+    }
+
+    #banner7:hover {
+        transform: translate(0px, -5px);
+    }
+
+    .projekt1 {
+        width: 100%;
+        height: 0vw;
+        display: flex;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt2 {
+        width: 100%;
+        height: 0vw;
+        display: flex;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt3 {
+        width: 100%;
+        height: 0vw;
+        display: flex;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt4 {
+        width: 100%;
+        height: 0vw;
+        display: flex;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt5 {
+        width: 100%;
+        height: 0vw;
+        display: flex;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt6 {
+        width: 100%;
+        height: 0vw;
+        display: flex;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt7 {
+        width: 100%;
+        height: 0vw;
+        display: flex;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        margin-top: -2vw;
+        margin-bottom: 2vw;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+
+    #beskrivelse {
+        flex-grow: 1;
+        flex-basis: 70%;
+        padding: 1vw;
+        z-index: 3;
+
+    }
+
+    #link {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #link div {
+        margin-top: -1vw;
+        width: 100%
+    }
+
+    #link div a {
+        text-decoration: none;
+        color: darkblue;
+        transition: all .2s ease;
+        font-size: 1vw;
+    }
+
+    #link div a:hover {
+        color: white;
+        text-shadow: 0 0 5px #0000af;
+
+    }
+
+    /*********************** 4.1. SLIDESHOW ***************************/
+
+    #slideshow {
+        flex-grow: 1;
+        flex-basis: 100%;
+        padding: .2vw;
+        z-index: 3;
+        height: 394px;
+        margin: 3px auto;
+        position: relative;
+    }
+
+    #slideshow img {
+        position: absolute;
+        width: 38.5vw;
+        height: 20vw;
+        border-radius: 1vw;
+
+    }
+
+    .projekt7 #slideshow video {
+        margin-left: 15vw
+    }
+
+
+    /*********************** 5. EFFEKT CLASSES ***************************/
+
+    .block {
+        display: block;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        visibility: visible;
+    }
+
+    .expand {
+        height: 21vw;
+        margin-bottom: 2vw;
+    }
+
+    .expand_cv {
+        height: 21vw;
+        margin-bottom: 2vw;
+    }
+
+    .fadeout {
+        animation-name: fadeout;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes fadeout {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .fadeout_fast {
+        animation-name: fadeout_fast;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes fadeout_fast {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+
+    .pulse {
+        animation-name: pulse;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+/*********************** MOBILE *******************/
+
+
+
+@media only screen and (max-width:1014px) {
+    body {
+        margin: 0%;
+        background-image: url(billeder/hero_image_mobile.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover
+    }
+
+    img {
+        width: 100%
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    Section {
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 83.5vw
+    }
+
+    /*********************** 1.1. TEKST **************************/
+
+    h1 {
+        font-family: PLayfair Display;
+
+
+    }
+
+    h2 {
+        font-family: Playfair Display;
+        margin-top: -.01vw;
+        font-size: 4vw;
+        font-weight: 400;
+    }
+
+    a {
+        font-family: raleway;
+
+    }
+
+    p {
+        font-family: raleway;
+        font-size: 2.8vw;
+
+    }
+
+
+
+
+    /*********************** 2. SITE ***************************/
+
+
+    #site {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 178.2vw;
+        position: absolute;
+
+    }
+
+    /*********************** 2.1. HERO IMAGE ***************************/
+
+
+    #hero {
+        background-image: url(billeder/hero_image_mobile.jpg);
+        width: 100%;
+        height: 178.2vw;
+        position: absolute;
+        z-index: 10;
+    }
+
+    #hero_border {
+        position: absolute;
+        width: 60%;
+        height: 20%;
+        border: .5vw solid white;
+        margin-left: 20%;
+        margin-top: 40%;
+        z-index: 11;
+        text-align: center;
+    }
+
+    .hero_text {
+        padding: 1vw;
+        width: 80%;
+        margin-top: 1vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+    }
+
+    .hero_text h1 {
+        font-family: Raleway;
+        font-size: 5vw;
+        font-weight: 100;
+        color: white;
+        padding-bottom: .5vw;
+        border-bottom: .5vw solid white;
+    }
+
+
+    .hero_text h2 {
+        font-family: Raleway;
+        font-size: 4vw;
+        font-weight: 100;
+        color: white;
+        margin-top: -1vw
+    }
+
+    #hero_knap {
+        width: 25vw;
+        height: 7vw;
+        padding: 0.5vw;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        transition: all 0.3s ease;
+        border: 0.1vw solid white;
+    }
+
+    p2 {
+        font-family: raleway;
+        font-weight: 600;
+        font-size: 3vw
+    }
+
+
+    /*********************** 3. MENU ***************************/
+
+    .sidemenu {
+        background-image: linear-gradient(270deg, black, rgba(0, 0, 0, 1), rgba(0, 0, 0, .80), rgba(0, 0, 0, .60), rgba(0, 0, 0, 0));
+        width: 50%;
+        height: 0vw;
+        text-align: center;
+        z-index: 1;
+        overflow-x: hidden;
+        margin-left: 51%;
+        margin-right: 0%;
+        position: fixed;
+        transition: all 1s ease;
+
+
+    }
+
+    #billede {
+        padding-top: 4vw;
+        display: none;
+
+    }
+
+    #billede img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        border-radius: 2vw;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+    }
+
+    #navn h1 {
+        font-size: 5vw;
+        color: white;
+        font-weight: 100
+    }
+
+    #punkter a {
+        display: block;
+        padding: 16px 0px 16px 0px;
+        text-decoration: none;
+        font-size: 3.5vw;
+        font-weight: 100;
+        color: White;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+
+    .social_links {
+        display: flex;
+        justify-content: center;
+        margin: 6vw
+    }
+
+    .facebook img {
+        width: 8vw;
+    }
+
+    .instagram img {
+        width: 8vw;
+        margin-left: 1vw;
+    }
+
+    .linkedin img {
+        width: 8vw;
+        margin-left: 1vw;
+    }
+
+    .twitter img {
+        width: 8vw;
+        margin-left: 1vw;
+    }
+
+    #cross {
+        background-image: url(billeder/cross.png);
+        height: 8vw;
+        width: 8vw;
+        background-size: 100%;
+        width: 16%;
+        margin-left: 42%
+    }
+
+    #burger_menu {
+        background-image: url(billeder/menu-alt-512.png);
+        width: 8vw;
+        height: 8vw;
+        background-size: 100%;
+        margin-left: 90%;
+        margin-top: 2%;
+        position: fixed;
+        z-index: 5;
+    }
+
+
+    /*********************** 4. INDHOLD ***************************/
+
+    #indhold {
+        padding-top: 2vw;
+        position: absolute;
+    }
+
+
+    /*********************** 4.1. CV ***************************/
+
+    #banner0 {
+        width: 100%;
+        height: 19vw;
+        padding: .5vw;
+        margin-top: 10vw;
+        cursor: pointer;
+        display: flex;
+        background-image: linear-gradient(350deg, grey, white);
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+    }
+
+
+    .overskrift {
+        height: 8vw;
+        width: 10vw;
+        flex-grow: 1;
+        flex-basis: 100%;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    #banner0 .overskrift h1 {
+        font-size: 8.5vw;
+        margin-left: 2vw;
+        margin-top: -5px
+    }
+
+    .icons {
+        height: 4vw;
+        width: 100%;
+        flex-grow: 1;
+        flex-basis: 100%;
+        padding: inherit;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .overskrift img {
+        width: 6vw;
+        height: 6vw;
+        margin-top: 1vw
+    }
+
+    .icons img {
+        width: 4vw;
+        margin: 2vw 0.3vw
+    }
+
+    .container {
+        position: relative;
+
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: .1vw;
+        right: 0;
+        height: 100%;
+        width: 3vw;
+        opacity: 0;
+        transition: .3s ease;
+        background-color: #4b4b4b;
+        border-radius: .5vw;
+        display: none;
+    }
+
+    .container:hover .overlay {
+        opacity: 1;
+    }
+
+    .text {
+        color: white;
+        font-size: .7vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .cv {
+        width: 100%;
+        height: 0px;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    #tekst1 {
+        padding: 1vw;
+        z-index: 3;
+
+    }
+
+    #tekst2 {
+        padding: 1vw;
+        z-index: 3;
+
+    }
+
+    p1 {
+        font-family: raleway;
+        font-size: 3.5vw
+    }
+
+
+    #billede1 {
+        z-index: 3;
+    }
+
+    #billede1 img {
+        width: 80%;
+        margin-left: 10%
+    }
+
+
+    .komp {
+        height: 5vw;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 1vw
+    }
+
+
+    .komptekst {
+        padding: .5vw;
+        width: 40%;
+    }
+
+    .dots {
+        display: flex;
+    }
+
+    .dot1 {
+        margin: 0.4vw 0.15vw;
+        height: 15px;
+        width: 15px;
+        border-radius: 20px;
+        background-color: darkblue;
+
+    }
+
+    .dot2 {
+        margin: 0.4vw 0.15vw;
+        border: 0.15vw solid darkblue;
+        height: 15px;
+        width: 15px;
+        border-radius: 20px;
+
+    }
+
+    .dot3 {
+        margin: 0.4vw 0.15vw;
+        height: 15px;
+        width: 15px;
+        border-radius: 20px;
+        background-image: linear-gradient(90deg, darkblue, #d4d4d4)
+    }
+
+
+
+    /*********************** 4.2. PROJEKTER ***************************/
+
+
+    .overskrift h1 {
+        font-size: 3vw;
+        margin-left: .5vw
+    }
+
+    #banner1 {
+        width: 100%;
+        height: 19vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    #banner2 {
+        width: 100%;
+        height: 19vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+    }
+
+    #banner3 {
+        width: 100%;
+        height: 19vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+    }
+
+    #banner4 {
+        width: 100%;
+        height: 19vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+    }
+
+    #banner5 {
+        width: 100%;
+        height: 19vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+    }
+
+    #banner6 {
+        width: 100%;
+        height: 19vw;
+        padding: .5vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+    }
+
+    #banner7 {
+        width: 100%;
+        height: 19vw;
+        padding: .5vw;
+        margin-bottom: 2vw;
+        cursor: pointer;
+        display: flex;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+    }
+
+
+    .projekt1 {
+        width: 100%;
+        height: 0px;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt2 {
+        width: 100%;
+        height: 0px;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt3 {
+        width: 100%;
+        height: 0px;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt4 {
+        width: 100%;
+        height: 0px;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt5 {
+        width: 100%;
+        height: 0px;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt6 {
+        width: 100%;
+        height: 0px;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+    .projekt7 {
+        width: 100%;
+        height: 0px;
+        background-color: lightgray;
+        overflow: hidden;
+        z-index: 1;
+        transition: all .5s;
+        margin-top: -2vw;
+        margin-bottom: 2vw;
+        box-shadow: 0.3vw 0.3vw 1vw white;
+        border-radius: 1vw;
+        background-image: linear-gradient(350deg, grey, white);
+
+    }
+
+
+    #beskrivelse {
+        flex-grow: 1;
+        flex-basis: 70%;
+        padding: 1vw;
+        z-index: 3;
+        height: 60%;
+
+    }
+
+
+    #link div {
+        margin-top: -.5vw;
+
+    }
+
+    #link div a {
+        text-decoration: none;
+        color: darkblue;
+        font-size: 3.5vw
+    }
+
+
+
+    /*********************** 4.1. SLIDESHOW ***************************/
+
+    #slideshow {
+        flex-grow: 1;
+        flex-basis: 100%;
+        padding: 1.8vw;
+        z-index: 3;
+        height: 40%;
+        margin: 3px auto;
+        position: relative;
+    }
+
+    #slideshow img {
+        position: absolute;
+        width: 80vw;
+        height: 49vw;
+        border-radius: 1vw;
+
+    }
+
+    /*********************** 5. EFFEKT CLASSES ***************************/
+
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        visibility: visible;
+    }
+
+    .expand {
+        height: 500px;
+        margin-bottom: 2vw;
+    }
+
+    .expand_cv {
+        height: 800px;
+        margin-bottom: 2vw;
+    }
+
+    .expand_menu {
+        height: 178.2vw;
+
+    }
+
+    .fadeout {
+        animation-name: fadeout;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes fadeout {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .fadeout_fast {
+        animation-name: fadeout_fast;
+        animation-duration: .3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+    }
+
+    @keyframes fadeout_fast {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+
+    .pulse {
+        animation-name: pulse;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.95);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+}
