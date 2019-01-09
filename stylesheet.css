@@ -14,7 +14,8 @@
 Links:
 http://martinottesen.dk/kea/01-web/02-html/01_02_05_stilartsite_v2/
 http://martinottesen.dk/kea/01-web/04-responsive/01_04_02_responsive_v2/
-http: //martinottesen.dk/kea/02-content/02-redesign/02_02_06_redesign/http://martinottesen.dk/kea/02-content/02-redesign/02_02_05_dokumentationssite/
+http://martinottesen.dk/kea/02-content/02-redesign/02_02_06_redesign/
+http://martinottesen.dk/kea/02-content/02-redesign/02_02_05_dokumentationssite/
 http://martinottesen.dk/kea/03-animation/spil/
 http://martinottesen.dk/kea/03-animation/03_05_01_Gruppe-23_dokumentationssite/
 http://martinottesen.dk/kea/04-ux/04_03_01_web-prototype/
@@ -29,7 +30,7 @@ img {
     width: 100%;
 }
 
-@media only screen and (min-width:1015px) {
+@media only screen and (min-width:1024px) {
 
     body {
         margin: 0%;
@@ -75,7 +76,6 @@ img {
 
     p1 {
         font-family: raleway;
-        font-size: 1vw;
     }
 
 
@@ -112,6 +112,7 @@ img {
         margin-right: 10vw;
         margin-top: 16.8vw;
         z-index: 11;
+        background-image: url(billeder/heroimage_crop.jpg);
         text-align: center;
     }
 
@@ -130,24 +131,11 @@ img {
         font-size: 2.5vw;
         font-weight: 100;
         color: white;
-        padding-bottom: .5vw;
-        border-bottom: .5vw solid white;
-
-
-    }
-
-    .hero_text h2 {
-        font-family: Raleway;
-        font-size: 2vw;
-        font-weight: 100;
-        color: white;
-        margin-top: -1vw
     }
 
     #hero_knap {
         width: 10vw;
         height: 3vw;
-        margin-top: -1vw;
         padding: 0.5vw;
         text-align: center;
         background-color: rgb(255, 255, 255);
@@ -377,7 +365,7 @@ img {
 
     .cv {
         width: 100%;
-        height: 0vw;
+        height: 0px;
         display: flex;
         background-color: lightgray;
         overflow: hidden;
@@ -413,7 +401,7 @@ img {
     }
 
     #billede1 img {
-        width: 15vw
+        width: 287px
     }
 
 
@@ -436,28 +424,28 @@ img {
 
     .dot1 {
         margin: 0.4vw 0.15vw;
-        height: 1.3vw;
-        width: 1.3vw;
+        height: 25px;
+        width: 25px;
         border-radius: 1vw;
-        background-color: darkblue;
+        background-color: blue;
 
     }
 
     .dot2 {
         margin: 0.4vw 0.15vw;
-        border: 0.05vw solid darkblue;
-        height: 1.3vw;
-        width: 1.3vw;
+        border: 0.03vw solid blue;
+        height: 25px;
+        width: 25px;
         border-radius: 1vw;
 
     }
 
     .dot3 {
         margin: 0.4vw 0.15vw;
-        height: 1.3vw;
-        width: 1.3vw;
+        height: 25px;
+        width: 25px;
         border-radius: 1vw;
-        background-image: linear-gradient(90deg, darkblue, #d4d4d4)
+        background-image: linear-gradient(90deg, blue, #d4d4d4)
     }
 
 
@@ -580,7 +568,7 @@ img {
 
     .projekt1 {
         width: 100%;
-        height: 0vw;
+        height: 0px;
         display: flex;
         background-color: lightgray;
         overflow: hidden;
@@ -594,7 +582,7 @@ img {
 
     .projekt2 {
         width: 100%;
-        height: 0vw;
+        height: 0px;
         display: flex;
         background-color: lightgray;
         overflow: hidden;
@@ -608,7 +596,7 @@ img {
 
     .projekt3 {
         width: 100%;
-        height: 0vw;
+        height: 0px;
         display: flex;
         background-color: lightgray;
         overflow: hidden;
@@ -622,7 +610,7 @@ img {
 
     .projekt4 {
         width: 100%;
-        height: 0vw;
+        height: 0px;
         display: flex;
         background-color: lightgray;
         overflow: hidden;
@@ -636,7 +624,7 @@ img {
 
     .projekt5 {
         width: 100%;
-        height: 0vw;
+        height: 0px;
         display: flex;
         background-color: lightgray;
         overflow: hidden;
@@ -650,7 +638,7 @@ img {
 
     .projekt6 {
         width: 100%;
-        height: 0vw;
+        height: 0px;
         display: flex;
         background-color: lightgray;
         overflow: hidden;
@@ -664,7 +652,7 @@ img {
 
     .projekt7 {
         width: 100%;
-        height: 0vw;
+        height: 0px;
         display: flex;
         background-color: lightgray;
         overflow: hidden;
@@ -693,15 +681,14 @@ img {
     }
 
     #link div {
-        margin-top: -1vw;
-        width: 100%
+        margin-top: -.5vw;
+
     }
 
     #link div a {
         text-decoration: none;
         color: darkblue;
-        transition: all .2s ease;
-        font-size: 1vw;
+        transition: all .2s ease
     }
 
     #link div a:hover {
@@ -730,10 +717,6 @@ img {
 
     }
 
-    .projekt7 #slideshow video {
-        margin-left: 15vw
-    }
-
 
     /*********************** 5. EFFEKT CLASSES ***************************/
 
@@ -750,12 +733,13 @@ img {
     }
 
     .expand {
-        height: 21vw;
+        height: 400px;
         margin-bottom: 2vw;
     }
 
     .expand_cv {
-        height: 21vw;
+        height: 400px;
+        margin-bottom: 2vw;
         margin-bottom: 2vw;
     }
 
@@ -820,7 +804,7 @@ img {
 
 
 
-@media only screen and (max-width:1014px) {
+@media only screen and (max-width:1023px) {
     body {
         margin: 0%;
         background-image: url(billeder/hero_image_mobile.jpg);
@@ -921,17 +905,6 @@ img {
         font-size: 5vw;
         font-weight: 100;
         color: white;
-        padding-bottom: .5vw;
-        border-bottom: .5vw solid white;
-    }
-
-
-    .hero_text h2 {
-        font-family: Raleway;
-        font-size: 4vw;
-        font-weight: 100;
-        color: white;
-        margin-top: -1vw
     }
 
     #hero_knap {
@@ -1206,13 +1179,13 @@ img {
         height: 15px;
         width: 15px;
         border-radius: 20px;
-        background-color: darkblue;
+        background-color: blue;
 
     }
 
     .dot2 {
         margin: 0.4vw 0.15vw;
-        border: 0.15vw solid darkblue;
+        border: 0.15vw solid blue;
         height: 15px;
         width: 15px;
         border-radius: 20px;
@@ -1224,7 +1197,7 @@ img {
         height: 15px;
         width: 15px;
         border-radius: 20px;
-        background-image: linear-gradient(90deg, darkblue, #d4d4d4)
+        background-image: linear-gradient(90deg, blue, #d4d4d4)
     }
 
 
